@@ -1,0 +1,156 @@
+    *, *:before, *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    button {
+        cursor: pointer;
+    }
+    a {
+        text-decoration: none;
+    }
+    ul, ol, li {
+        list-style: none;
+    }
+    img {
+        vertical-align: top;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: inherit;
+        font-size: inherit;
+        margin: 0;
+    }
+    html, body {
+        height: 100%;
+        font-size: 16px;
+        color: #141414;
+        font-family: 'JetBrains Mono', monospace;    
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    .wrapper {
+        min-height: 100%;
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    .sidebar {
+        padding: 64px 40px;
+        min-width: 350px;
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        border-right: 1px solid #CECECE;
+    }
+    .sidebar-header {
+        margin-bottom: 20px;
+    }
+    .sidebar-logo {
+    }
+    .sidebar-logo a{
+        color: #141414;
+        font-size: 24px;
+    }
+    .sidebar-menu {
+        margin-bottom: -25px;
+    }
+    .sidebar-menu-item {
+        margin-bottom: 25px;
+    }
+    .sidebar-menu-link {
+        color: #141414;
+        font-size: 18px;
+    }
+    .sidebar-menu-list {
+        margin-top: 10px;
+        margin-bottom: 0;
+        padding-left: 10px;
+    }
+    .sidebar-list-item {
+        list-style: none;
+    }
+    .sidebar-list-item::before {
+        content: "\2022";
+        color: #7A7A7A;
+        width: 1em;
+        font-weight: bold;
+    }
+    .sidebar-list-link {
+        color: #7A7A7A;
+        line-height: 1.75; 
+    }
+    .main {
+        margin-left: 350px;
+        padding: 64px 40px 44px 40px;
+    }
+    .main-section {
+        margin-bottom: 35px;
+    }
+    .main-article {
+        margin-bottom: 20px;
+    }
+    .h1 {
+        font-size: 32px;
+        margin-bottom: 28px;
+    }
+    .h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    .h2:first-of-type {
+        margin-bottom: 10px;
+    }
+    .h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-weight: 700;
+    }
+    .text {
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: 20px
+    }
+    .list-title {
+        font-weight: 700;
+    }
+    .list {
+        margin-top: 5px;
+        padding-left: 10px;
+        list-style-position: inside;
+    }
+    .link {
+        text-decoration: underline;
+        color: inherit;
+    }
+    .code-block {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    #Basic_Usage .code-block, #Integrations .code-block {
+        margin-bottom: 35px;
+    }
+
+    @media (max-width: 992px) {
+        .sidebar {
+            position: relative;
+            height: auto;
+            padding-bottom: 0;
+        }
+        .sidebar-menu {
+            display: flex;
+            gap: 20px 50px;
+        }
+        .main {
+            margin-left: 0;
+        }
+    }
+    
+    .visually-hidden{
+        display: none;
+        visibility: hidden;
+    }

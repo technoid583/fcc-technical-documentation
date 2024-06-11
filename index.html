@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>04 — Technical Documentation Page</title>
+        <!-- Google Font links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Connect Highlight.js Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="sidebar" id="navbar">
+                <header class="sidebar-header">
+                    <div class="sidebar-logo"><a href="/">myCLIapp</a></div>
+                </header>
+                <div class="sidebar-menu">
+                    <div class="sidebar-menu-item">
+                        <a href="#Getting_Started" class="sidebar-menu-link nav-link">Getting Started</a>
+                        <ul class="sidebar-menu-list">
+                            <li class="sidebar-list-item">
+                                <a href="#Installation" class="sidebar-list-link nav-link">Installation</a>
+                            </li>
+                            <li class="sidebar-list-item">
+                                <a href="#Basic_Usage" class="sidebar-list-link nav-link">Basic Usage</a>
+                            </li>
+                            <li class="sidebar-list-item">
+                                <a href="#Configuration" class="sidebar-list-link nav-link">Configuration</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-menu-item">
+                        <a href="#Features" class="sidebar-menu-link nav-link">Features</a>
+                        <ul class="sidebar-menu-list">
+                            <li class="sidebar-list-item">
+                                <a href="#Feature_1:_Description" class="sidebar-list-link nav-link">Feature 1: Description</a>
+                            </li>
+                            <li class="sidebar-list-item">
+                                <a href="#Feature_2:_Description" class="sidebar-list-link nav-link">Feature 2: Description</a>
+                            </li>
+                            <li class="sidebar-list-item">
+                                <a href="#Feature_3:_Description" class="sidebar-list-link nav-link">Feature 3: Description</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-menu-item">
+                        <a href="#Advanced_Usage" class="sidebar-menu-link nav-link">Advanced Usage</a>
+                        <ul class="sidebar-menu-list">
+                            <li class="sidebar-list-item">
+                                <a href="#Command_Flags" class="sidebar-list-link nav-link">Command Flags</a>
+                            </li>
+                            <li class="sidebar-list-item">
+                                <a href="#Customization" class="sidebar-list-link nav-link">Customization</a>
+                            </li>
+                            <li class="sidebar-list-item">
+                                <a href="#Integrations" class="sidebar-list-link nav-link">Integrations</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main class="main" id="main-doc">
+                <section id="Welcome_to_myCLIapp_Documentation" class="">
+                    <header class="title h1">Welcome to myCLIapp Documentation</header>
+                    <section class="main-article">
+                        <header class="title h2">Introduction</header>
+                        <p class="text">
+                            Welcome to the official documentation for myCLIapp, a versatile Command-Line Interface (CLI) application designed to simplify and optimize various tasks. Whether you're a seasoned developer, sysadmin, or a casual user, myCLIapp provides a robust set of features to enhance your workflow.
+                        </p>
+                    </section>
+                </section>
+
+                <section id="Getting_Started" class="main-section">
+                    <header class="title h2">Getting Started</header>
+                    <section id="Installation" class="main-article main-section">
+                        <header class="title h3">Installation</header>
+                        <p class="text">To begin your journey with myCLIapp, follow these straightforward steps:</p>
+                        <span class="list-title">1. Download the Latest Release:</span>
+                        <ul class="list">
+                            <li>Visit <a href="#" class="link">the official download page.</a></li>
+                            <li>Choose the appropriate version for your platform.</li>
+                            <li>Follow the installation instructions provided.</li>
+                            <li class="visually-hidden">Visually hidden element</li>
+                            <li class="visually-hidden">Visually hidden element</li>
+                        </ul>
+                    </section>
+                    <section id="Basic_Usage" class="main-article main-section">
+                        <header class="title h3">Basic Usage</header>
+                        <p class="text">Once you have myCLIapp installed, you can start utilizing its powerful features. Here are some fundamental commands to get you started:</p>
+                        <pre><code class="code-block">
+# Example 1: Creating a basic CLI command in Python
+
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(description="A simple CLI application.")
+    parser.add_argument("input_file", help="Path to the input file")
+    parser.add_argument("--output", help="Path to the output file")
+
+    args = parser.parse_args()
+
+    # Your code here to process the input file
+
+    if args.output:
+        # Your code here to save results to the output file
+
+if __name__ == "__main__":
+    main()
+                        </code></pre>
+
+                        <pre><code class="code-block">
+# Example 2: Adding options and flags to a CLI command
+
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(description="A CLI application with options and flags")
+    parser.add_argument("input_file", help="Path to the input file")
+    parser.add_argument("--output", help="Path to the output file")
+    parser.add_argument("--verbose", action="store_true", help="Enable verbose mode")
+
+    args = parser.parse_args()
+
+    if args.verbose:
+        print("Verbose mode enabled")
+
+    # Your code here to process the input file
+
+    if args.output:
+        # Your code here to save results to the output file
+
+if __name__ == "__main__":
+    main()
+                        </code></pre>
+                        <p class="text">For a comprehensive list of commands and their options, refer to the Commands section.</p>
+                    </section>
+                    <section id="Configuration" class="main-article main-section">
+                        <header class="title h3">Configuration</header>
+                        <p class="text">You have the freedom to customize myCLIapp to suit your specific preferences and requirements. This can be accomplished by editing the configuration file located at <code>~/.myCLIapp/config.yaml</code>. For detailed instructions, consult the Configuration Guide.</p>
+                    </section>
+                </section>
+
+                <section id="Features" class="main-section">
+                    <header class="title h2">Features</header>
+                    <section id="Feature_1:_Description" class="main-article main-section">
+                        <header class="title h3">Feature 1: Description</header>
+                        <p class="text">[Include a detailed description of Feature 1 here. Explain how it enhances user productivity and why it's a valuable addition to their toolkit.]</p>
+                    </section>
+                    <section id="Feature_2:_Description" class="main-article main-section">
+                        <header class="title h3">Feature 2: Description</header>
+                        <p class="text">[Provide an in-depth explanation of Feature 2. Highlight its advantages and showcase how it simplifies complex tasks.]</p>
+                    </section>
+                    <section id="Feature_3:_Description" class="main-article main-section">
+                        <header class="title h3">Feature 3: Description</header>
+                        <p class="text">[Elaborate on Feature 3, illustrating how it complements the existing functionality. Offer practical examples of its usage.]</p>
+                    </section>
+                </section>
+
+                <section id="Advanced_Usage" class="main-section">
+                    <header class="title h2">Advanced Usage</header>
+                        <section id="Command_Flags" class="main-article main-section">
+                            <header class="title h3">Command Flags</header>
+                            <p class="text">In certain scenarios, you may need to utilize command flags to further refine your myCLIapp experience. This section outlines the available flags and their respective functions.</p>
+                            <pre><code class="code-block">
+# Example 3: Handling errors and exceptions in a CLI command
+
+import argparse
+
+def main():
+    try:
+        parser = argparse.ArgumentParser(description="A CLI application with error handling")
+        parser.add_argument("input_file", help="Path to the input file")
+
+        args = parser.parse_args()
+
+        # Your code here to process the input file
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    main()                          
+                            </code></pre>
+                        </section>
+                        <section id="Customization" class="main-article main-section">
+                            <header class="title h3">Customization</header>
+                            <p class="text">Discover how to tailor myCLIapp to your workflow. From custom key bindings to theme selection, this section covers various customization options.</p>
+                            <pre><code class="code-block">
+# Example 4: Using a configuration file in a CLI command
+
+import argparse
+import configparser
+
+def main():
+    try:
+        parser = argparse.ArgumentParser(description="A CLI application with configuration file")
+        parser.add_argument("--config", help="Path to the configuration file")
+
+        args = parser.parse_args()
+
+        config = configparser.ConfigParser()
+        config.read(args.config)
+
+        # Your code here to use values from the configuration file
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    main()          
+                            </code></pre>
+                        </section>
+                        <section id="Integrations" class="main-article main-section">
+                            <header class="title h3">Integrations</header>
+                            <p class="text">Learn how to seamlessly integrate myCLIapp with other tools and platforms, enhancing your overall productivity and efficiency.</p>
+                            <pre><code class="code-block">
+# Example 5: Implementing subcommands in a CLI application
+
+import argparse
+
+def command1(args):
+    # Your code for command 1 here
+    print("Running command 1")
+
+def command2(args):
+    # Your code for command 2 here
+    print("Running command 2")
+
+def main():
+    parser = argparse.ArgumentParser(description="A CLI application with subcommands")
+    subparsers = parser.add_subparsers(title="subcommands", dest="subcommand")
+
+    parser_command1 = subparsers.add_parser("command1", help="Description of command 1")
+    parser_command2 = subparsers.add_parser("command2", help="Description of command 2")
+
+    parser_command1.set_defaults(func=command1)
+    parser_command2.set_defaults(func=command2)
+
+    args = parser.parse_args()
+    args.func(args)
+
+if __name__ == "__main__":
+    main()    
+                            </code></pre>
+                        </section>
+                </section>
+                <p class="text">
+                    These Python code snippets illustrate different aspects of creating a Command-Line Interface (CLI) application, including argument parsing, handling options and flags, error handling, using a configuration file, and implementing subcommands. You can customize and expand upon these examples to fit the functionality of your myCLIapp.
+                </p>
+            </main>
+        </div>
+
+
+        <!-- Connect Highlight.js Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>
